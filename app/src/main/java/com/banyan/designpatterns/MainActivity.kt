@@ -6,6 +6,8 @@ import com.banyan.designpatterns.createdpattern.factory.abstractive.AZooFactory
 import com.banyan.designpatterns.createdpattern.factory.abstractive.BZooFactory
 import com.banyan.designpatterns.createdpattern.factory.normal.PandaFactory
 import com.banyan.designpatterns.createdpattern.factory.normal.TigerFactory
+import com.banyan.designpatterns.createdpattern.singleton.HungrySingleton
+import com.banyan.designpatterns.createdpattern.singleton.LazySingleton
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,5 +31,8 @@ class MainActivity : AppCompatActivity() {
         seagull.eat()
         val dolphin = bZooFactory.swimAnimal()
         dolphin.eat()
+
+        HungrySingleton.print()
+        LazySingleton.instance.print()
     }
 }
