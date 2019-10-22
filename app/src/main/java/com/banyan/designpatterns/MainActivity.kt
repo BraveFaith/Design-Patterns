@@ -2,6 +2,7 @@ package com.banyan.designpatterns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.banyan.designpatterns.createdpattern.builder.Student
 import com.banyan.designpatterns.createdpattern.factory.abstractive.AZooFactory
 import com.banyan.designpatterns.createdpattern.factory.abstractive.BZooFactory
 import com.banyan.designpatterns.createdpattern.factory.normal.PandaFactory
@@ -34,5 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         HungrySingleton.print()
         LazySingleton.instance.print()
+
+        val student = Student.build {
+            nameBuild = "lily"
+            ageBuild = 10
+        }
+        student.introduce()
     }
 }
