@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         LazySingleton.instance.print()
 
         val student = Student.build {
-            nameBuild = "lily"
-            ageBuild = 10
+            nameBuilder = "lily"
+            ageBuilder = 10
         }
         student.introduce()
     }
